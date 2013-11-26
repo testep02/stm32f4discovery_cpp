@@ -1,0 +1,62 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="STM32F4DiscoveryBoard" target="8" version="2">
+  <project Name="STM32F4DiscoveryBoard">
+    <configuration Name="Common" Placement="Flash" Target="STM32F407VG" arm_architecture="v7EM" arm_core_type="Cortex-M4" arm_fpu_type="FPv4-SP-D16" arm_gcc_target="arm-unknown-eabi" arm_linker_heap_size="128" arm_linker_jtag_pad_pre_dr="1" arm_linker_jtag_pad_pre_ir="5" arm_linker_process_stack_size="0" arm_linker_stack_size="256" arm_simulator_memory_simulation_filename="$(TargetsDir)/STM32/STM32SimulatorMemory.dll" arm_simulator_memory_simulation_parameter="STM32F407VG;0x100000;0x20000" arm_target_connect_with_reset="Yes" arm_target_debug_interface_type="ADIv5" arm_target_interface_type="Default" arm_target_loader_applicable_loaders="Flash" arm_target_loader_default_loader="Flash" arm_target_restrict_memory_accesses="Yes" c_user_include_directories="$(TargetsDir)/STM32/include;$(TargetsDir)/CMSIS_3/CMSIS/Include" linker_memory_map_file="$(TargetsDir)/STM32/STM32F407VG_MemoryMap.xml" linker_output_format="hex" linker_printf_fp_enabled="Yes" linker_scanf_character_group_matching_enabled="Yes" linker_scanf_fp_enabled="Yes" linker_section_placement_file="$(StudioDir)/targets/Cortex_M/flash_placement.xml" project_directory="" project_type="Executable" property_groups_file_path="$(TargetsDir)/STM32/propertyGroups.xml" target_get_partname_script="GetPartName()" target_match_partname_script="MatchPartName(&quot;$(Target)&quot;)" target_reset_script="Reset()" target_trace_initialize_script="EnableTrace(&quot;$(TraceInterfaceType)&quot;)"/>
+    <configuration Name="Flash" arm_target_flash_loader_file_path="$(TargetsDir)/STM32/Release/STM32F2xx_Loader_rpc.elf" arm_target_flash_loader_type="LIBMEM RPC Loader" arm_target_loader_can_erase_all="Yes" arm_target_loader_can_lock_all="No" arm_target_loader_can_lock_range="No" arm_target_loader_can_unlock_all="No" arm_target_loader_can_unlock_range="No" target_reset_script="FLASHReset()"/>
+    <folder Name="Source Files">
+      <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc"/>
+      <file file_name="main.cpp"/>
+      <file file_name="main.h"/>
+      <file file_name="stm32f4xx_delay.h"/>
+      <file file_name="stm32f4xx_gpio.c"/>
+      <file file_name="Stm32F4XX_Discovery.cpp"/>
+      <file file_name="Stm32F4XX_Discovery.h"/>
+      <file file_name="stm32f4xx_conf.h"/>
+      <file file_name="system_stm32f4xx.c"/>
+      <file file_name="stm32f4xx_it.c"/>
+      <file file_name="stm32f4xx_it.h"/>
+      <file file_name="stm32f4xx_delay.c"/>
+      <file file_name="stm32f4xx_rcc.c"/>
+      <file file_name="SPFD5408A.cpp"/>
+      <file file_name="SPFD5408A.h"/>
+      <file file_name="stm32f4xx_fsmc.c"/>
+      <file file_name="GraphicsLib.cpp"/>
+      <file file_name="GraphicsLib.h"/>
+      <file file_name="TftDriver.cpp"/>
+      <file file_name="TftDriver.h"/>
+      <file file_name="Led_Pwm.cpp"/>
+      <file file_name="stm32f4xx_spi.c"/>
+      <file file_name="stm32f4xx_tim.c"/>
+      <file file_name="Led_Pwm.h"/>
+      <file file_name="ILI9341.cpp"/>
+      <file file_name="ILI9341.h"/>
+      <file file_name="LIS302DL.cpp"/>
+      <file file_name="LIS302DL.h"/>
+      <file file_name="GraphicsColors.h"/>
+      <file file_name="stm32f4xx_exti.c"/>
+      <file file_name="stm32f4xx_syscfg.c"/>
+      <file file_name="misc.c"/>
+      <folder Name="include">
+        <folder Name="hardware">
+          <file file_name="pwm.h"/>
+        </folder>
+        <folder Name="Graphics">
+          <file file_name="Screen.h"/>
+          <file file_name="Screen.cpp"/>
+        </folder>
+      </folder>
+    </folder>
+    <folder Name="System Files">
+      <file file_name="$(StudioDir)/source/thumb_crt0.s"/>
+      <file file_name="$(TargetsDir)/STM32/STM32_Startup.s"/>
+      <file file_name="$(TargetsDir)/STM32/STM32_Target.js">
+        <configuration Name="Common" file_type="Reset Script"/>
+      </file>
+    </folder>
+  </project>
+  <configuration Name="THUMB Debug" inherited_configurations="THUMB;Debug"/>
+  <configuration Name="THUMB" Platform="ARM" arm_instruction_set="THUMB" arm_library_instruction_set="THUMB" c_preprocessor_definitions="__THUMB" hidden="Yes"/>
+  <configuration Name="Debug" c_preprocessor_definitions="DEBUG;STARTUP_FROM_RESET" gcc_debugging_level="Level 3" gcc_optimization_level="None" hidden="Yes"/>
+  <configuration Name="THUMB Release" inherited_configurations="THUMB;Release"/>
+  <configuration Name="Release" c_preprocessor_definitions="NDEBUG" gcc_debugging_level="Level 1" gcc_optimization_level="Level 3" hidden="Yes"/>
+</solution>
