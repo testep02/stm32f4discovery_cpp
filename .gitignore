@@ -1,0 +1,15 @@
+# Compiled Source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.elf
+*.hex
+*.bin
+
+# Backup Files #
+################
+*.bak
